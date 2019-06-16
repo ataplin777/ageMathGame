@@ -1,0 +1,37 @@
+name = input("Hello, what is your name? ")
+age = int(input("Hello " + name + ". My name is Python. How old are you? "))
+print("That's really interesting! So, your name is " + name + " and you're " + str(age) + " years old.")
+
+choices = ["Y", "N"]
+answer = ""
+while answer not in choices:
+    answer = input("Do you want to play a math game? Type 'Y' for yes or type 'N' for no! ")
+    if answer == "N":
+        print("Ok, thank you!")
+        break
+else:
+    print("Great, let's play!")
+    solution = age * 4
+    user_answer = 0  # Remember to initialize variables in while loops first
+    while user_answer != solution:
+        user_answer = int(input("What is the value of four times your age? "))
+        if user_answer == solution:
+            print("That is correct!")
+
+            choices = ["Y", "N"]
+            answer = ""
+            while answer not in choices:
+                answer = input("Would you like to try another round? Type 'Y' for yes or type 'N' for no! ")
+                if answer == "N":
+                    print("Ok, thank you for playing!")
+                    break
+            else:
+                print("Great, let's play another round!")
+                solution = (age * 2) + 6
+                user_answer = 0  # Remember to initialize variables in while loops first
+                while user_answer != solution:
+                    user_answer = int(input("If you had a sibling twice your age, how old would they be in 6 years? "))
+                    if user_answer == solution:
+                        print("That is correct! Great job!")
+                    else:
+                        print("Plesae try again!")
